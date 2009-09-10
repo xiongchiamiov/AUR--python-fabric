@@ -1,0 +1,20 @@
+# Maintainer: James Pearson <james.m.pearson+arch@gmail.com>
+
+pkgname=python-fabric
+pkgver=0.9b1
+pkgrel=1
+pkgdesc="A Python library and command-line tool designed to streamline deploying applications or performing system administration tasks via the SSH protocol."
+url="http://fabfile.org/"
+license=('GPL')
+arch=('i686' 'x86_64')
+depends=('python-paramiko')
+source=(http://git.fabfile.org/cgit.cgi/fabric/snapshot/fabric-$pkgver.tar.gz)
+md5sums=('8ebf903c7be9e54502007919c6237d21')
+
+build() {
+  cd $startdir/src/fabric-$pkgver
+  python setup.py install --root=$startdir/pkg
+
+  install -D -m644 README ${pkgdir}/usr/share/doc/${pkgname}/README
+  install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+}
