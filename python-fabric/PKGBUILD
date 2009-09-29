@@ -2,12 +2,13 @@
 
 pkgname=python-fabric
 pkgver=0.9b1
-pkgrel=2
+pkgrel=3
 pkgdesc="A Python library and command-line tool designed to streamline deploying applications or performing system administration tasks via the SSH protocol."
 url="http://fabfile.org/"
 license=('GPL')
 arch=('i686' 'x86_64')
 depends=('python-paramiko')
+makedepends=('setuptools')
 source=(http://github.com/bitprophet/fabric/tarball/aabdc44f73063fe3787b00ce2119ba43886cc007)
 md5sums=('2e122b70d51c78e1d7f5fd12f1ff2801')
 
