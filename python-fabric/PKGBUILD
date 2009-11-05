@@ -1,21 +1,20 @@
 # Maintainer: James Pearson <james.m.pearson+arch@gmail.com>
 
 pkgname=python-fabric
-pkgver=0.9b1
-pkgrel=3
+pkgver=0.9rc1
+pkgrel=1
 pkgdesc="A Python library and command-line tool designed to streamline deploying applications or performing system administration tasks via the SSH protocol."
 url="http://fabfile.org/"
-license=('GPL')
+license=('BSD')
 arch=('i686' 'x86_64')
-depends=('python-paramiko')
 makedepends=('setuptools')
-source=(http://github.com/bitprophet/fabric/tarball/aabdc44f73063fe3787b00ce2119ba43886cc007)
-md5sums=('2e122b70d51c78e1d7f5fd12f1ff2801')
+source=('http://pypi.python.org/packages/source/F/Fabric/Fabric-0.9rc1.tar.gz#md5=680bdb78ccfd0e943aad20150758abae' 'http://github.com/bitprophet/fabric/raw/63daa45fb9268e55fde3ca8f489f2066d27ba978/LICENSE')
+md5sums=('680bdb78ccfd0e943aad20150758abae' '36aa9192922a5eaf13e64a325eb09ffe')
 
 build() {
-  cd $startdir/src/bitprophet-fabric-aabdc44f73063fe3787b00ce2119ba43886cc007
+  cd $startdir/src/Fabric-$pkgver
   python setup.py install --root=$startdir/pkg
 
   install -D -m644 README ${pkgdir}/usr/share/doc/${pkgname}/README
-  install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+  install -D -m644 ../LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
 }
