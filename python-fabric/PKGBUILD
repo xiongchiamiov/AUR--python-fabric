@@ -8,7 +8,7 @@ url="http://fabfile.org/"
 license=('BSD')
 arch=('i686' 'x86_64')
 makedepends=('setuptools')
-source=('http://pypi.python.org/packages/source/F/Fabric/Fabric-0.9rc1.tar.gz#md5=680bdb78ccfd0e943aad20150758abae' 'http://github.com/bitprophet/fabric/raw/63daa45fb9268e55fde3ca8f489f2066d27ba978/LICENSE')
+source=('http://pypi.python.org/packages/source/F/Fabric/Fabric-0.9rc1.tar.gz' 'http://github.com/bitprophet/fabric/raw/63daa45fb9268e55fde3ca8f489f2066d27ba978/LICENSE')
 md5sums=('680bdb78ccfd0e943aad20150758abae' '36aa9192922a5eaf13e64a325eb09ffe')
 
 build() {
