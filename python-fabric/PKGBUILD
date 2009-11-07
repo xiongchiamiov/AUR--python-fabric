@@ -2,19 +2,19 @@
 
 pkgname=python-fabric
 pkgver=0.9rc1
-pkgrel=1
+pkgrel=2
 pkgdesc="A Python library and command-line tool designed to streamline deploying applications or performing system administration tasks via the SSH protocol."
 url="http://fabfile.org/"
 license=('BSD')
 arch=('i686' 'x86_64')
 makedepends=('setuptools')
-source=('http://pypi.python.org/packages/source/F/Fabric/Fabric-0.9rc1.tar.gz' 'http://github.com/bitprophet/fabric/raw/63daa45fb9268e55fde3ca8f489f2066d27ba978/LICENSE')
-md5sums=('680bdb78ccfd0e943aad20150758abae' '36aa9192922a5eaf13e64a325eb09ffe')
+source=("http://code.fabfile.org/projects/fabric/files/fabric-$pkgver.tar.gz")
+md5sums=('f5aa5a2d36ccdf435122d86742fcddd0')
 
 build() {
-  cd $startdir/src/Fabric-$pkgver
+  cd $startdir/src/fabric-$pkgver
   python setup.py install --root=$startdir/pkg
 
   install -D -m644 README ${pkgdir}/usr/share/doc/${pkgname}/README
-  install -D -m644 ../LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+  install -D -m644 LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
 }
