@@ -2,11 +2,12 @@
 
 pkgname=python-fabric
 pkgver=0.9rc1
-pkgrel=2
+pkgrel=3
 pkgdesc="A Python library and command-line tool designed to streamline deploying applications or performing system administration tasks via the SSH protocol."
 url="http://fabfile.org/"
 license=('BSD')
 arch=('i686' 'x86_64')
+depends=('pycrypto')
 makedepends=('setuptools')
 source=("http://code.fabfile.org/projects/fabric/files/fabric-$pkgver.tar.gz")
 md5sums=('f5aa5a2d36ccdf435122d86742fcddd0')
