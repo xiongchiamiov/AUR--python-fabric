@@ -1,7 +1,7 @@
 # Maintainer: James Pearson <james.m.pearson+arch@gmail.com>
 
 pkgname=python-fabric
-pkgver=0.9.0
+pkgver=0.9.1
 pkgrel=1
 pkgdesc="A Python library and command-line tool designed to streamline deploying applications or performing system administration tasks via the SSH protocol."
 url="http://fabfile.org/"
@@ -9,8 +9,9 @@ license=('BSD')
 arch=('i686' 'x86_64')
 depends=('pycrypto')
 makedepends=('setuptools')
+conflicts=('python-paramiko')
 source=("http://code.fabfile.org/projects/fabric/files/Fabric-$pkgver.tar.gz")
-md5sums=('696e42e6e771fa2a365cd03536d4cdcf')
+md5sums=('2c2dc002d0da6cc4041f1c12be51e762')
 
 build() {
   cd $startdir/src/Fabric-$pkgver
