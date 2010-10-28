@@ -14,6 +14,7 @@ md5sums=('5ba652d4d4525fb6b470edf55747ea45')
 
 build() {
   cd $startdir/src/Fabric-$pkgver
+  patch -u < ../../fix-pycrypto-version.patch
   python2 setup.py install --root=$startdir/pkg
 
   install -D -m644 README ${pkgdir}/usr/share/doc/${pkgname}/README
