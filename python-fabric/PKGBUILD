@@ -8,7 +8,7 @@ url="http://fabfile.org/"
 license=('BSD')
 arch=('i686' 'x86_64')
 depends=('pycrypto' 'python2>=2.5' 'python-paramiko')
-makedepends=('setuptools')
+makedepends=('python2-distribute')
 source=("http://code.fabfile.org/projects/fabric/files/Fabric-$pkgver.tar.gz")
 md5sums=('5ba652d4d4525fb6b470edf55747ea45')
 
